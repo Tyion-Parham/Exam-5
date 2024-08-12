@@ -62,11 +62,23 @@ void Email::collectEmail()
 		catch (Email::EmailExceeptions e)
 		{
 			if (errorCheck == 1)
+			{
 				std::cout << e.multipleAtSigns;
+				std::cin.clear();
+				std::cin.ignore(100, '\n');
+			}
 			else if (errorCheck == 2)
+			{ 
 				std::cout << e.invalidStart;
+				std::cin.clear();
+				std::cin.ignore(100, '\n');
+			}
 			else
+			{
 				std::cout << e.noTDL;
+				std::cin.clear();
+				std::cin.ignore(100, '\n');
+			}
 		}
 	}
 }
